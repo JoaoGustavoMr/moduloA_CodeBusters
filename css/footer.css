@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ===========================
+   RODAPÉ
+=========================== */
+footer {
+    background-color: #020a71;
+    color: white;
+    padding-top: 40px;
+    position: relative;
+    width: 100%;
+}
+
+/* CONTAINER PRINCIPAL */
+.container-rodape {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+/* SEÇÕES */
+.secao-rodape {
+    flex: 1;
+    min-width: 280px;
+}
+
+.logo-rodape {
+    width: 160px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo-rodape:hover {
+    transform: scale(1.05);
+}
+
+/* TÍTULOS */
+footer h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-left: 4px solid #fff;
+    padding-left: 8px;
+}
+
+/* TEXTOS */
+footer p,
+footer a,
+footer li {
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* LISTA DE CONTATO */
+.lista-contato {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-contato li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* ÍCONES */
+.lista-contato i {
+    font-size: 16px;
+    color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+/* RODAPÉ INFERIOR */
+.rodape-final {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+    margin-top: 30px;
+    background-color: #007bff;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .container-rodape {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer h3 {
+        border: none;
+        padding: 0;
+    }
+
+    .lista-contato li {
+        justify-content: center;
+    }
+}

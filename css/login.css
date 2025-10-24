@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+    --azul: #007bff;
+    --azul-escuro: #0056b3;
+    --branco: #ffffff;
+    --cinza-claro: #f4f8ff;
+    --sombra: rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--azul), var(--azul-escuro));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: var(--branco);
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 6px 20px var(--sombra);
+    text-align: center;
+}
+
+.logo {
+    width: 250px;
+}
+
+h2 {
+    color: var(--azul);
+    font-size: 32px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    color: var(--azul);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px 14px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    border: 2px solid var(--azul);
+    border-radius: 10px;
+    background: var(--cinza-claro);
+    font-size: 15px;
+    color: var(--azul-escuro);
+    outline: none;
+    transition: 0.2s;
+}
+
+.opcoes {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 20px; 
+    color: var(--azul);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.opcoes:hover {
+    color: var(--azul-escuro);
+    text-decoration: underline;
+}
+
+/* ===== BOTÃO ===== */
+button {
+    width: 100%;
+    background: linear-gradient(135deg, var(--azul), var(--azul-escuro));
+    color: var(--branco);
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.02);
+    background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
+}
+
+.links-baixo {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+a {
+    color: var(--azul);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--azul-escuro);
+    text-decoration: underline;
+}
+
+.erro {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 35px 25px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    input,
+    select {
+        font-size: 14px;
+    }
+}
