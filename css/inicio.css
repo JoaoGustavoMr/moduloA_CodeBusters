@@ -27,7 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(135deg, var(--azul), var(--azul-escuro));
+    background-color: #4BA1B7;
     border-radius: 16px;
     color: var(--branco);
     padding: 60px;
@@ -97,22 +97,22 @@
 
 .card i {
     font-size: 36px;
-    color: var(--azul);
+    color: #4BA1B7;
     margin-bottom: 15px;
 }
 
 .card h3 {
     font-size: 20px;
-    color: var(--azul-escuro);
-    margin-bottom: 8px; /* menor para a linha ficar próxima */
+    color: #4BA1B7;
+    margin-bottom: 8px; 
 }
 
 /* Linha entre título e subtítulo */
 .card .card-divider {
     height: 2px;
     width: 50px;
-    background-color: var(--azul);
-    margin: 0 auto 10px auto; /* centraliza e adiciona espaçamento */
+    background-color: #4BA1B7;
+    margin: 0 auto 10px auto;
     border-radius: 1px;
 }
 
@@ -125,7 +125,7 @@
 .btn-card {
     display: inline-block;
     text-decoration: none;
-    background: var(--azul);
+    background-color: #4BA1B7;
     color: var(--branco);
     padding: 10px 18px;
     border-radius: 10px;
@@ -138,12 +138,10 @@
     transform: scale(1.05);
 }
 
-/* Wrapper da seção */
 .info-sections-wrapper {
     padding: 40px 0;
 }
 
-/* Título geral da seção */
 .info-sections-title {
     font-size: 28px;
     font-weight: 600;
@@ -154,7 +152,7 @@
 
 .info-sections {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* cards maiores */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     margin-bottom: 20px;
     gap: 30px;
 }
@@ -162,9 +160,9 @@
 .info-section {
     background: var(--branco);
     border-radius: 16px;
-    padding: 35px 25px; /* mais altura */
-    box-shadow: 0 8px 25px var(--sombra); /* sombra mais presente */
-    min-height: 250px; /* altura mínima maior */
+    padding: 35px 25px; 
+    box-shadow: 0 8px 25px var(--sombra); 
+    min-height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -175,7 +173,7 @@
 
 .info-section h4 {
     font-size: 20px;
-    color: var(--azul-escuro);
+    color: #4BA1B7;
     margin-bottom: 10px;
 }
 
@@ -185,11 +183,10 @@
     line-height: 1.6;
 }
 
-/* Linha entre título e subtítulo */
 .info-section .card-divider {
     height: 2px;
     width: 50px;
-    background-color: var(--azul);
+    background-color: #4BA1B7;
     margin: 0 auto 15px auto;
     border-radius: 1px;
 }

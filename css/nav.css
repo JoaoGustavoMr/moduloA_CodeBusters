@@ -8,7 +8,7 @@
 
 nav {
     width: 100%;
-    background: linear-gradient(135deg, var(--azul), var(--azul-escuro));
+    background-color: #4BA1B7;
     padding: 25px 40px;
     display: flex;
     align-items: center;
@@ -64,6 +64,28 @@ nav {
     color: var(--branco);
     font-size: 22px;
     cursor: pointer;
+}
+.navegacao a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative; /* necessário para o ::after */
+    transition: color 0.3s;
+}
+
+.navegacao a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* distância do texto */
+    width: 0;
+    height: 2px;
+    background: var(--branco);
+    transition: width 0.2s ease-in-out;
+}
+
+.navegacao a:hover::after {
+    width: 100%;
 }
 
 @media (max-width: 850px) {

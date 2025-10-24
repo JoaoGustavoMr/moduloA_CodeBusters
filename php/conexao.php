@@ -2,7 +2,7 @@
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpassword = '';
-$db_banco = 'gestao_cursos';
+$db_banco = 'moduloa_codebusters';
 
 $conexao = new mysqli($dbhost, $dbuser, $dbpassword, $db_banco);
 

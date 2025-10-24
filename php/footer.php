@@ -13,15 +13,18 @@
         <div class="container-rodape">
             <!-- LOGO -->
             <div class="secao-rodape">
-                <img src="../img/image-removebg-preview (9).png" alt="Logo" class="logo-rodape">
+                <img src="../img/logo-youtan-branco.png" alt="Logo" class="logo-rodape">
             </div>
 
             <!-- DESCRIÇÃO -->
             <div class="secao-rodape" id="descricao-sistema">
                 <h3>Sobre o Sistema</h3>
                 <p>
-                    O <strong>Cursos Tech</strong> é uma plataforma inovadora de gestão de cursos online, projetada para facilitar o
-                    gerenciamento de conteúdos educacionais, acompanhamento de alunos e análise de desempenho. 
+                     A <strong>Youtan</strong> é uma empresa desenvolvedora de softwares e 
+aplicativos sob demanda, com 20 anos de mercado e localizada no PIT em São 
+José dos Campos. A empresa auxilia médias e grandes organizações na 
+promoção da transformação digital, entregando soluções completas em 
+tecnologia e inovação. 
                 </p>
             </div>
 

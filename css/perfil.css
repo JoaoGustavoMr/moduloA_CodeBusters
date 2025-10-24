@@ -7,70 +7,77 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
-body {
-    background-color: #e6ebff; 
-}
 
+body {
+    background-color: white;
+    color: #0d1b75;
+}
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
+
 .titulo {
     text-align: center;
-    margin-bottom: 50px;
-    position: relative;
+    margin-bottom: 45px;
 }
 
 .titulo h1 {
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 700;
+    color: #0d1b75;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 12px;
-    color: #0d1b75; 
+    justify-content: center;
+    gap: 10px;
 }
 
 .titulo h1 i {
-    font-size: 32px;
-    color: #0d1b75;
+    font-size: 36px;
+    color: #1a2b8c;
 }
 
 .titulo p {
     font-size: 18px;
     font-weight: 400;
-    color: #1a2b8c;
+    color: #3346b1;
+    margin-top: 8px;
 }
 
+.titulo .linha {
+    width: 80px;
+    height: 3px;
+    background-color: #0d1b75;
+    margin: 15px auto 0 auto;
+    border-radius: 10px;
+}
 .container-form {
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 40px 35px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 750px;
     max-width: 95%;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .container-form:hover {
     transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .container-form h3 {
     margin-bottom: 25px;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 700;
     color: #0d1b75;
     border-bottom: 2px solid #0d1b75;
-    padding-bottom: 8px;
+    padding-bottom: 6px;
 }
 
-/* ===========================
-   LABELS E INPUTS
-=========================== */
 label {
     display: block;
     margin-bottom: 8px;
@@ -84,11 +91,11 @@ input[type="password"] {
     width: 100%;
     padding: 12px 14px;
     margin-bottom: 20px;
-    border: 1.5px solid #ccc;
-    border-radius: 8px;
+    border: 1.5px solid #ccd2ff;
+    border-radius: 10px;
     font-size: 16px;
     transition: all 0.3s;
-    color: #000000;
+    color: #000;
     background-color: #f9faff;
 }
 
@@ -98,21 +105,31 @@ input:focus {
     outline: none;
 }
 
-/* ===========================
-   BOTÕES
-=========================== */
+/* Campos somente leitura */
+input[readonly] {
+    background-color: #f1f3ff;
+    color: #555;
+    cursor: not-allowed;
+}
+
+
+.botoes {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
 button {
     background-color: #0d1b75;
     color: white;
     padding: 14px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
-    width: 100%;
     transition: all 0.3s;
-    margin-top: 10px;
 }
 
 button:hover {
@@ -120,18 +137,17 @@ button:hover {
 }
 
 #sair {
-    background-color: #d2000b;
-    margin-top: 20px;
+    background-color: #c6000f;
 }
 
-.botoes {
-    display: flex;
-    gap: 15px;
-    flex-direction: column;
+#sair:hover {
+    background-color: #e60012;
 }
-@media (max-width: 600px) {
+
+
+@media (max-width: 768px) {
     .container-form {
-        padding: 30px 20px;
+        padding: 30px 25px;
     }
 
     .titulo h1 {
@@ -139,6 +155,21 @@ button:hover {
     }
 
     .container-form h3 {
-        font-size: 24px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo h1 {
+        font-size: 28px;
+    }
+
+    input, button {
+        font-size: 15px;
+    }
+
+    .container-form {
+        border-radius: 12px;
+        padding: 25px 20px;
     }
 }

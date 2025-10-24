@@ -11,13 +11,15 @@ if (!isset($_SESSION['id_usuario'])) {
 
 $id_usuario = $_SESSION['id_usuario'];
 
-$stmt = $conexao->prepare("SELECT nome FROM usuarios WHERE id = ?");
+$stmt = $conexao->prepare("SELECT nome, nivel_permissao FROM usuarios WHERE usuario_id = ?");
 $stmt->bind_param("i", $id_usuario);
 $stmt->execute();
 $result = $stmt->get_result();
 $usuario_nav = $result->fetch_assoc();
 
 $nome_completo = $usuario_nav['nome'];
+$nivel_usuario = $usuario_nav['nivel_permissao'];
+
 $partes = explode(' ', trim($nome_completo));
 $iniciais = '';
 foreach ($partes as $parte) {
@@ -39,25 +41,34 @@ foreach ($partes as $parte) {
 
 <body>
     <nav>
-        <div class="logo">
-            <a href="inicio.php"><img src="../img/image-removebg-preview (9).png" alt="Logo"></a>
-        </div>
+    <div class="logo">
+        <a href="inicio.php"><img src="../img/logo-youtan-branco.png" alt="Logo"></a>
+    </div>
 
-        <div class="hamburger" id="hamburger">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+    <div class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+    </div>
 
-        <ul class="navegacao" id="menu-nav">
-            <li><a href="inicio.php">Início</a></li>
-            <li><a href="cursos.php">Cursos</a></li>
+    <ul class="navegacao" id="menu-nav">
+        <li><a href="inicio.php">Início</a></li>
+        <li><a href="ativos.php">Ativos</a></li>
+        <li><a href="manutencao.php">Manutenção</a></li>
+        <?php if ($nivel_usuario === 'admin'): ?>
+            <li><a href="adicionar_ativo.php">Adicionar Ativo</a></li>
+            <li><a href="adicionar_manutencao.php">Adicionar Manutenção</a></li>
+            <li><a href="gerenciar_usuarios.php">Área Administrativa</a></li>
+        <?php endif; ?>
 
-            <?php if ($_SESSION['tipo_usuario'] === 'admin'): ?>
-                <li><a href="../php/gerenciar_usuarios.php">Usuários</a></li>
-            <?php endif; ?>
+        <li>
+            <a href="notificacoes.php" class="notificacao">
+                <i class="fa-solid fa-bell"></i>
+            </a>
+        </li>
 
-            <li><a href="perfil.php" id="perfil"><?php echo htmlspecialchars($iniciais); ?></a></li>
-        </ul>
-    </nav>
+        <li><a href="perfil.php" id="perfil"><?php echo htmlspecialchars($iniciais); ?></a></li>
+    </ul>
+</nav>
+
 
     <script>
         const hamburger = document.getElementById("hamburger");
