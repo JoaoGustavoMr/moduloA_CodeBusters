@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Out-2025 às 13:23
+-- Tempo de geração: 24-Out-2025 às 13:46
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -37,8 +37,7 @@ CREATE TABLE `ativos` (
   `status` enum('em uso','em manutenção','disponível','baixado') DEFAULT 'disponível',
   `localizacao` varchar(150) DEFAULT NULL,
   `responsavel_id` int(11) DEFAULT NULL,
-  `garantia_fim` date DEFAULT NULL,
-  `data_registro` datetime DEFAULT current_timestamp()
+  `garantia_fim` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -161,11 +160,8 @@ CREATE TABLE `usuarios` (
   `nome` varchar(100) NOT NULL,
   `email` varchar(150) NOT NULL,
   `senha_hash` varchar(255) NOT NULL,
-  `nivel_permissao` enum('admin','destinatario') NOT NULL DEFAULT 'destinatario',
-  `setor` varchar(100) DEFAULT NULL,
-  `foto_url` varchar(255) DEFAULT NULL,
-  `data_cadastro` datetime DEFAULT current_timestamp(),
-  `ativo` tinyint(1) DEFAULT 1
+  `nivel_permissao` enum('admin','colaborador') NOT NULL,
+  `setor` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
